@@ -1,0 +1,15 @@
+{
+  "name": "chatgpt",
+  "version": "1.0.0",
+  "description": "API connection to OpenAI",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["chatgpt","openai","nodejs","node","api"],
+  "author": "adanjz",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.3.1"
+  }
+}
