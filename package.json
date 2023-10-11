@@ -1,15 +1,25 @@
 {
-  "name": "chatgpt",
-  "version": "1.0.0",
+  "name": "adanjz-chatgpt",
+  "version": "1.0.3",
   "description": "API connection to OpenAI",
   "main": "index.js",
+  "type":"module",
   "scripts": {
+    "start":"node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": ["chatgpt","openai","nodejs","node","api"],
   "author": "adanjz",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "dotenv": "^16.3.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adanzweig/NodeJS-ChatGPT.git"
+  },
+  "bugs":{
+    "url":"https://github.com/adanzweig/NodeJS-ChatGPT/issues"
+  },
+  "homepage": "https://github.com/adanzweig/NodeJS-ChatGPT"
 }

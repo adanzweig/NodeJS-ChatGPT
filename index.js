@@ -1,7 +1,8 @@
-require('dotenv').config()
-async function connectToChatGPT(prompt,message){
+// require('dotenv').config()
+import dotenv from 'dotenv';
+dotenv.config();
+export async function connectToChatGPT(apiKey,messages){
     const url = 'https://api.openai.com/v1/chat/completions';
-    const apiKey = process.env.API_KEY;
 
     const headers = {
         'Content-Type':'application/json',
@@ -11,10 +12,11 @@ async function connectToChatGPT(prompt,message){
 
     const data = {
         model: 'gpt-3.5-turbo',
-        messages: [
-            { role: 'system', content: prompt},
-            { role: 'user', content: message}
-        ]
+        messages
+        // messages: [
+        //     { role: 'system', content: prompt},
+        //     { role: 'user', content: message}
+        // ]
     }
 
     try{
@@ -30,9 +32,10 @@ async function connectToChatGPT(prompt,message){
     }
 }
 
-const message = 'Tell me something interesting about the Mutants from the X-men';
-const prompt = 'You are someone that loves Marvel Universe.';
+// const message = 'Tell me something interesting about the Mutants from the X-men';
+// const prompt = 'You are someone that loves Marvel Universe.';
+// const apiKey = process.env.API_KEY;
 
-Promise.resolve(connectToChatGPT(message,prompt)).then(
-    body=> console.log(body)
-)
+// Promise.resolve(connectToChatGPT(apiKey,message,prompt)).then(
+//     body=> console.log(body)
+// )
