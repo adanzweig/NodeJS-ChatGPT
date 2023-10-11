@@ -1,7 +1,7 @@
 // require('dotenv').config()
-import dotenv from 'dotenv';
-dotenv.config();
-export async function connectToChatGPT(apiKey,messages){
+// import dotenv from 'dotenv';
+// dotenv.config();
+async function connectToChatGPT(apiKey,messages){
     const url = 'https://api.openai.com/v1/chat/completions';
 
     const headers = {
@@ -39,3 +39,6 @@ export async function connectToChatGPT(apiKey,messages){
 // Promise.resolve(connectToChatGPT(apiKey,message,prompt)).then(
 //     body=> console.log(body)
 // )
+module.exports = {
+    connectToChatGPT
+}
